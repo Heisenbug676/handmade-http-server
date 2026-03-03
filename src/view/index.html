@@ -6,33 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
             height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
 
         .box {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: none;
+            height: auto;
+            width: 350px;
+            padding: 30px 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 28px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: coral;
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+
+        label {
+            font-family: 'KaiTi', '楷体', 'STKaiti', serif;
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e1e1e1;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 1px solid coral;
-            height: 200px;
-            width: 300px;
+            font-size: 15px;
+            transition: all 0.3s;
+            outline: none;
+        }
 
+        input:focus {
+            border-color: coral;
+            box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.2);
+        }
 
+        input::placeholder {
+            color: #aaa;
+            font-size: 14px;
         }
 
         .but {
             background-color: coral;
             border: none;
-            padding: 10px 20px;
-            margin-top: 30px;
+            padding: 14px 20px;
+            margin-top: 10px;
             display: block;
+            width: 100%;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 127, 80, 0.4);
+        }
+
+        .but:hover {
+            background-color: #ff6b3d;
+            box-shadow: 0 7px 20px rgba(255, 127, 80, 0.6);
+            transform: scale(1.02);
+        }
+
+        .but:active {
+            transform: scale(0.98);
+        }
+
+        #position {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            min-height: 45px;
+            background-color: #f8f9fa;
+            border-left: 4px solid coral;
+            color: #555;
+            word-break: break-word;
+        }
+
+        
+        br {
+            display: none;
+        }
+        
+        
+        [for="password"] {
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -40,7 +141,7 @@
 <body>
     <div class="box">
 
-        <h2 style="text-align: center;">登录页面</h2>
+        <h2>登录页面</h2>
         <label for="username" style="font-family: kaiti;font-size: 20px;">用户名：</label>
         <input type="text" id="username" placeholder="请输入用户名">
         <br>
@@ -78,9 +179,6 @@
                 position.innerText = "连接不到服务器,记得运行服务器!";
             }
         }
-
-
-
     </script>
 </body>
 
