@@ -37,8 +37,8 @@
 - [x] **异常捕获**：前端加入了 `try...catch` 机制，当服务器未运行或连接失败时能给出友好提示。
 ---
 ## 🛠️效果展示
-**前端效果展示图：**![前端效果展示图](./src/view/前端页面.png)
+**前端效果展示图：**![前端效果展示图](./src/view/qianduan.png)
 
-![登录成功页面展示](./src/view/登录成功.png)
+![登录成功页面展示](./src/view/login%20sucess.png)
 **终端展示:**
-![终端](./src/view/终端.png)
+![终端](./src/view/terminal.png)
