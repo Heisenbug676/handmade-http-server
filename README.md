@@ -39,6 +39,6 @@
 ## 🛠️效果展示
 **前端效果展示图：**![前端效果展示图](./src/view/frontend.png)
 ![登录成功页面展示](./src/view/login_sucess.png)
-**终端展示:**
 
+**终端展示:**
 ![终端](./src/view/terminal.png)
